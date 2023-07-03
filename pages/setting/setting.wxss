@@ -1,0 +1,93 @@
+/* pages/setting/setting.wxss */
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.usercard {
+  padding-top: 10px;
+  width: 94.87%;
+  margin: 0 auto;
+  border-radius: 12px;
+  background-color: #F3F3F3;
+  padding: 1px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mott {
+  padding-left: 12px;
+  width: 95.67%;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.mott view {
+  margin: 20px;
+}
+
+.webind {
+  padding-left: 12px;
+  width: 95.67%;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 12px 12px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+}
+
+.webind text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.webind text text {
+  color: red;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.webindlist {
+  padding-left: 12px;
+  width: 95%;
+  background-color: #fff;
+  border-radius: 0px 0px 12px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+}
+
+
+.welcome {
+  padding-left: 12px;
+  display: flex;
+  flex-direction: row;
+  width: 95.67%;
+  border-radius: 12px 12px 0px 0px;
+  align-items: center;
+
+  background-color: #FFF;
+}
+
+.welcome image {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+.welcome text {
+  margin: 0 5px;
+  color: #1890FF;
+}

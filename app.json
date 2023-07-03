@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/setting/setting",
+    "pages/val/val"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "数据"
+    },
+    {
+      "pagePath": "pages/val/val",
+      "text": "我的"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

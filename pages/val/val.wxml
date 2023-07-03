@@ -1,0 +1,41 @@
+<!--pages/val/val.wxml-->
+<view class="val_main">
+  <view class="title card">
+    <van-row>
+      <van-col span="12">
+        <text>2023-6-21</text>
+        <text class="jusen_text">
+          聚森</text><text class="zhongtai_text">中台</text>
+      </van-col>
+      <van-col span="12">
+        
+      </van-col>
+
+    </van-row>
+  </view>
+
+  <view class="com_register card">
+    <view class="left_text">
+      <text class="text1">还没有账号</text>
+    <text class="text2">
+    寻求合作！</text>
+    </view>
+    <van-button class="register_now" size="small" type="info">立即注册</van-button>
+  </view>
+
+  <view class="valcode card">
+    <text>请输入您的唯一注册码</text>
+  
+    <van-field class="code_input"
+    size="large"
+    value="{{ value }}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    bind:change="onChange"
+    
+   />
+   <van-button block  class="val_but" type="info" bindtap="toRegister">验证</van-button>
+  
+  </view>
+
+</view>

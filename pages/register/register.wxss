@@ -1,0 +1,49 @@
+/* pages/register/register.wxss */
+
+.card {
+  width: 100%;
+  width: 94.6%;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.reg_main{
+  padding-top: 10px;
+  width: 94.87%;
+  margin: 0 auto;
+  border-radius: 12px;
+  background-color: #F3F3F3;
+  padding: 1px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 16px;
+  padding: 9px;
+}
+
+.com {
+  color: #1890ff;
+  margin-right: 8px;
+}
+
+.confirm {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 8px;
+}
+
+.confirm van-button {
+  width: 90%;
+
+}

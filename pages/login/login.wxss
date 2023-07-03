@@ -1,0 +1,63 @@
+/* pages/login/login.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  padding: 20rpx;
+}
+
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 230rpx;
+  margin-bottom: 40rpx;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  width: 80rpx;
+  font-size: 30rpx;
+}
+
+input {
+  flex: 1;
+  height: 60rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+}
+
+.login-btn {
+  width: 300rpx;
+  height: 80rpx;
+  background-color: #007aff; /* 修改为蓝色 */
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+
+.input-field {
+  width: 70%;
+}
+
+
+.feedback {
+  font-size: 28rpx;
+  color: #3D3D3D;
+  line-height: 28px;
+}

@@ -1,0 +1,28 @@
+<!--pages/setting/setting.wxml-->
+
+
+<view class="banner">
+  <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
+  <van-image width="3rem" height="3rem" fit="contain" src="/images/cross.png" />
+  <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
+</view>
+
+<view class="usercard">
+  <view class="welcome">
+    <image src="/images/jusen_logo.png" mode="" />
+    <text>{{department}} {{username}} </text> 你好！
+    <van-button style="position:absolute;right: 5%;" size="small" type="info">设置</van-button>
+  </view>
+  <view class="mott">
+    <view>青春无悔 不负时光 私域直播</view>
+  </view>
+  <view class="webind">
+    <text>
+      已绑定微信数: <text> {{vbindcount}} </text>
+    </text>
+  </view>
+
+  <view class="webindlist">
+    OOOOOOOOOOOOOO<van-button type="info">管理绑定微信</van-button>
+  </view>
+</view>

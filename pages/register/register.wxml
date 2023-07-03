@@ -1,0 +1,68 @@
+<!--pages/register/register.wxml-->
+
+<view class="reg_main">
+  <view class="logo">
+    <van-image width="50" height="50" src="/images/jusen_logo.png" />
+  </view>
+
+  <view class="title card">
+    <text class="com">合作商户名称</text><text>的员工注册空间</text>
+  </view>
+
+  <view class="select_department card">
+    <van-field value="{{ departmentName }}" label="选择部门：" disabled border="{{ false }}" bindtap="showPopup" />
+
+    <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+      <van-picker show-toolbar bind:cancel="onCancel"
+    bind:confirm="onConfirm" title="选择部门" columns="{{ departments }}" bind:change="onChange" />
+
+    </van-popup>
+  </view>
+
+  <view class="inputname card">
+    <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    icon="question-o"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+  />
+
+  <van-field
+    value="{{ phone }}"
+    label="手机号"
+    placeholder="请输入手机号"
+    required
+  />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="确认密码"
+    placeholder="请再次输入密码"
+    required
+    border="{{ false }}"
+  />
+
+
+
+  </view>
+
+  <view class="confirm card">
+    <van-button size="large" type="info">注册</van-button>
+  </view>
+
+  <view class="confirm card">
+    <van-button size="large" type="danger">我要反馈</van-button>
+  </view>
+
+</view>

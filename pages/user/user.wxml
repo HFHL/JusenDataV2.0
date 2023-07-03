@@ -1,0 +1,87 @@
+<!--pages/user/user.wxml-->
+
+<view class="banner">
+  <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
+  <van-image width="3rem" height="3rem" fit="contain" src="/images/cross.png" />
+  <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
+
+</view>
+
+<view class="usercard">
+  <view class="welcome">
+    <image src="/images/jusen_logo.png" mode="" />
+    <text>{{department}} {{username}} </text> 你好！
+    <van-button bindtap="onSetting" style="position:absolute;right: 5%;" size="small" type="info">设置</van-button>
+  </view>
+  <view class="mott">
+    <view>青春无悔 不负时光 私域直播</view>
+  </view>
+  <view class="webind">
+    <text>
+      已绑定微信数: <text> {{vbindcount}} </text>
+    </text>
+    <view class="webindlist">
+    OOOOOOOOOOOOOO
+  </view>
+  </view>
+  
+  <view class="day">
+    <view class="dayleft">
+      <text>XXXX-XX-XX
+      </text>
+      <text>DAY</text> <text> 1 </text>
+    </view>
+    <view class="dayright">
+      <text>XXXX-XX-XXxxxxxxxxxxx</text>
+      <text>
+        xxxxxxxxxxxxxxxxxxxxxxx
+      </text>
+    </view>
+  </view>
+
+  <view class="task">
+    <van-row>
+      <van-col span="12">
+        <view class="taskcard">
+          <a>任务概览</a>
+          <view class="tasklist">
+            <view class="listitem">
+              <view class="status finished"></view><text>已完成任务：</text><text>12</text><text></text>
+            </view>
+            <view class="listitem">
+              <view class="status needtofinish"></view><text>待完成任务：</text><text>18</text><text></text>
+            </view>
+            <view class="listitem">
+              <view class="status timeout"></view><text>未完成任务：</text><text>6</text><text></text>
+            </view>
+
+
+          </view>
+        </view>
+      </van-col>
+      <van-col span="12">
+        <view class="chartbox">
+          <view class="chart">
+            <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec}}"></ec-canvas>
+          </view>
+        </view>
+      </van-col>
+    </van-row>
+
+
+  </view>
+
+  <view class="sendtogroup">
+    <view class="taskitem">
+      <view class="status needtofinish"></view><text class="togrouptext">群发所有用户</text>
+      <!-- <van-button  class="togroupbutton"  size="small" type="info">立即转发</van-button> -->
+    <button  class="togroupbutton">立即转发</button>
+    </view>
+  </view>
+
+
+  <view class="button_group">
+    <button type="primary">修改信息</button>
+    <button type="warn">退出登录</button>
+  </view>
+</view>
