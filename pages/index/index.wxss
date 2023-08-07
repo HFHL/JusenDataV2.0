@@ -1,5 +1,431 @@
-.banner  {
+.activity_card{
+  margin: 0px 0px 10px 0px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity_card_left{
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  width: 250px;
+  height: 100px;
+  background-image: url("https://img.yzcdn.cn/vant/cat.jpeg");
+  background-size: cover;
+}
+
+.activity_card_right{
+  display: flex;
+  flex-direction: column;
+  /* 文字左对齐 */
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.berow {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* 间距 */
+  font-size: 18px;
+}
+
+.clue{
+  margin-top: -20px;
+  font-size: 18px;
+}
+
+.gap{
+  width: 10px;
+}
+
+.username{
+  font-size: 18px;
+}
+
+
+@font-face {
+  font-family: "iconfont"; /* Project id 4180776 */
+  src: url('//at.alicdn.com/t/c/font_4180776_14whkqdotwy.woff2?t=1690249761485') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4180776_14whkqdotwy.woff?t=1690249761485') format('woff'),
+       url('//at.alicdn.com/t/c/font_4180776_14whkqdotwy.ttf?t=1690249761485') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jifen:before {
+  content: "\e60c";
+}
+
+.icon-chakan_1:before {
+  content: "\e60d";
+}
+
+.icon-shouhou2:before {
+  content: "\e60e";
+}
+
+.icon-kefu1:before {
+  content: "\e609";
+}
+
+.icon-haoping:before {
+  content: "\e8c6";
+}
+
+.icon-tongxun:before {
+  content: "\e8c7";
+}
+
+.icon-shoucang:before {
+  content: "\e8c8";
+}
+
+.icon-xinxi:before {
+  content: "\e8c9";
+}
+
+.icon-lianjie:before {
+  content: "\e8ca";
+}
+
+.icon-tuijian:before {
+  content: "\e8cb";
+}
+
+
+.charts-box {
+  
+  width: 100%;
+  height: 120px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.title text {
+  flex: 3;
+  font-size: 21px;
+}
+
+.title .stream {
+  flex: 7;
+  background-color: #E5E5E5;
+  border-radius: 3px;
+}
+
+.stream text {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.gvm {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+
+}
+
+.gvmtext{
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px;
+}
+
+.gvmnumber{
+  font-size: 28px;
+}
+
+
+.title_box{
+  padding: 0px;
+  border-radius: 15px;
+  margin-bottom: 3px;
+  
+}
+
+.group_data_list {
+  margin:0px auto;
+  padding: 0px;
+  border-radius: 14px;
+  /* 2*2宫格 */
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.item{
+  /* 2*2宫格 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 12px;
+  
+}
+
+.text-shadow_red{
+  /* h-shadow 水平阴影的位置 v-shadow 垂直阴影的位置 blur 模糊的距离 color 阴影的颜色; */
+ text-shadow: 3px 3px 4px #e54d42;
+}
+.text-shadow_yellow{
+  /* h-shadow 水平阴影的位置 v-shadow 垂直阴影的位置 blur 模糊的距离 color 阴影的颜色; */
+ text-shadow: 3px 3px 4px #fbbd08;
+}
+
+.text-shadow_blue{
+  /* h-shadow 水平阴影的位置 v-shadow 垂直阴影的位置 blur 模糊的距离 color 阴影的颜色; */
+ text-shadow: 3px 3px 4px #0081ff;
+}
+
+.text-shadow_green{
+  /* h-shadow 水平阴影的位置 v-shadow 垂直阴影的位置 blur 模糊的距离 color 阴影的颜色; */
+ text-shadow: 3px 3px 4px #8dc63f;
+}
+
+.data_card {
+  padding: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: space-between;
+  align-items: space-between;
+}
+
+.data_card text:nth-child(1) {
+  margin: 6px auto;
+}
+
+
+.red_font {
+  color: red;
+}
+
+.delete{
+  /* 红底白字居中 */
+  background-color: #e54d42;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.blue_font {
+  color: #1890FF;
+}
+
+.bot_bar {
+  margin-top: 90px;
+}
+
+
+
+.mott {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  padding: 15px 0px;
+  border-radius: 12px 12px 0px 0px;
+  margin-top: 5px;
+}
+
+.main {
+  margin-top: 0px;
+  padding: 0 3px;
+  z-index: 0;
+  background-color: #fff;
+ 
+}
+
+.detail_card_list {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+.detail_card {
+  padding: 7px 7px 0px 7px;
+}
+
+.call_vell {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag_list van-tag {
+  margin-right: 5px;
+}
+
+.wx_name {
+  font-weight: 500;
+}
+
+.wx_name text {
+  margin-right: 6px;
+}
+
+.action_list {
+  display: flex;
+  flex-direction: column;
+  max-height: 110px;
+  overflow: scroll;
+}
+
+.action {
+  margin-top: 8px;
+  width: 97%;
+  background-color: #f3f3f3;
+  display: flex;
+  border-radius: 12px;
+  padding: 3px 0px;
+}
+
+.image_box {
+  margin: 5px 8px;
+
+  background-color: #E5DD4E;
+  padding: 1px 4px 1px 1px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.text_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.text_box text:nth-child(1) {
+  color: #1890FF;
+}
+
+.text_box text:nth-child(2) {
+  font-weight: bold;
+}
+
+.goal {
+  width: 94.6%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+
+.goal text {
+  font-weight: bold;
+}
+
+.warning_card {
+  background-color: #FFE3E3;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 3px;
+}
+
+.invite_goal {
+  flex: 2;
+}
+
+.leave_group_count {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank {
+  width: 94.6%;
+  margin: 8px 0;
+}
+
+.bold_font {
+  font-weight: bold;
+}
+
+.font{
+  font-size: 18px;
+  color: rgb(19, 18, 18);
+  /* 白色背景。圆角边框 */
+  
+  border-radius: 8px;
+  padding: 0 10px;
+  /* 居中 */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: max-content;
+  height: 30px;
+  margin-top: 2px;
+ 
+  
+}
+
+.clue_detaile_list{
+  width: 350px;
+  padding: 0px 10px;
+  overflow: scroll;
+  max-height: 430px;
+}
+
+.detail_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+  font-size: 18px;
+  padding: 10px 0px;
+  
+}
+
+.status{
+  background-color: #E5DD4E;
+  padding: 1px 4px 1px 4px;
+  border-radius: 3px;
+  flex: 1;
+  line-height: 18px;
+}
+
+.productname{
+  /* 文字右对齐 */
+  text-align: right;
+  flex: 3;
+  line-height: 18px;
 }

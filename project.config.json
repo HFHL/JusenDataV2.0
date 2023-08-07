@@ -47,12 +47,14 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
-  "appid": "wx7b048160b1a66215",
-  "projectname": "miniprogram-92",
+  "appid": "wx4da720fbfaa556e4",
+  "projectname": "JusenSiyu",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "simulatorPluginLibVersion": {}
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctions/",
+  "cloudfunctionRoot": "cloud/"
 }

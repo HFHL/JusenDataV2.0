@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "@qiun/ucharts": "^2.5.0-20230101",
+    "@qiun/wx-ucharts": "^2.5.0-20230101",
     "@vant/weapp": "^1.10.19",
     "antd-mini": "^1.9.2",
-    "echarts": "^5.4.2"
+    "echarts": "^5.4.2",
+    "wx-server-sdk": "*"
   }
 }

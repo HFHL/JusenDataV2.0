@@ -1,0 +1,207 @@
+<view class="data_main">
+  <text class="font gr_bg" selectable="false" space="false" decode="false">社群数据</text>
+  <view class="  title_box">
+    <view class="box shadow-warp bg-white">
+      <view class="group_data_list text-black ">
+        <view class="data_card ">
+          <text class="text-lg ">总人数</text>
+          <text class="">200</text>
+        </view>
+        <view class="data_card">
+          <text class="text-lg ">种子用户</text>
+          <text>78</text>
+        </view>
+        <view class="data_card">
+          <text class="text-lg ">总邀约目标</text>
+          <text>400</text>
+        </view>
+        <view class="data_card">
+          <text class="text-lg ">裂变用户</text>
+          <text>122</text>
+        </view>
+      </view>
+      <van-divider />
+      <view class="charts-box">
+        <qiun-wx-ucharts type="mix" opts="{{opts}}" chartData="{{chartData}}" />
+      </view>
+    </view>
+    
+  </view>
+  <view class="cell">
+      <text class="" selectable="false" space="false" decode="false">今日达成邀约目标员工数</text>
+      <text>22</text>
+    </view>
+    <view class="cell">
+      <text class="" selectable="false" space="false" decode="false">今日应发奖金</text>
+      <text>200</text>
+    </view>
+  <!-- chart -->
+  <!-- chart -->
+  <text class="font2" selectable="false" space="false" decode="false">销售数据</text>
+  <view class="  title_box">
+    <view class="box2 shadow-warp bg-white">
+      <view class="group_data_list text-black ">
+        <view class="data_card ">
+          <text class="text-lg ">当前总GMV</text>
+          <text class="">200</text>
+        </view>
+        <view class="data_card">
+          <text class="text-lg ">总销量</text>
+          <text>78</text>
+        </view>
+        <view class="data_card">
+          <text class="text-lg ">总下单人数</text>
+          <text>400</text>
+        </view>
+        <view class="data_card">
+          <text class="text-lg ">总代办线索</text>
+          <text>122</text>
+        </view>
+      </view>
+      <van-divider />
+      <view class="charts-box2">
+        <qiun-wx-ucharts type="mix" opts="{{opts2}}" chartData="{{chartData2}}" />
+      </view>
+    </view>
+  </view>
+  <view class="mott">
+    <view>青春无悔 不负时光 私域直播</view>
+  </view>
+  <view class="detail_card_list">
+    <van-tabs type="line" active="{{ active }}" bind:change="onChange">
+      <van-tab title="邀约总人数">
+        <view class="invite_list">
+          <!-- for循环，遍历detail_list -->
+          <view wx:for="{{detail_list}}" wx:key="index">
+            <van-row class="invite_list row_space">
+              <van-col span="9">
+                <view class="row_view">
+                  <van-image round width="45" height="45" src="{{item.img}}" />
+                  <text class="name">{{item.username}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>总人数</text>
+                  <text>{{item.all_invite}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>种子用户</text>
+                  <text>{{item.seed_count}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>裂变用户</text>
+                  <text>{{item.fission_count}}</text>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="邀约种子数">
+        <view class="invite_list">
+          <view wx:for="{{detail_list}}" wx:key="index">
+            <van-row class="invite_list row_space">
+              <van-col span="9">
+                <view class="row_view">
+                  <van-image round width="45" height="45" src="{{item.img}}" />
+                  <text class="name">{{item.username}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>总人数</text>
+                  <text>{{item.all_invite}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>种子用户</text>
+                  <text>{{item.seed_count}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>裂变用户</text>
+                  <text>{{item.fission_count}}</text>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title=" GMV ">
+        <view class="invite_list">
+          <view wx:for="{{detail_list}}" wx:key="index">
+            <van-row class="invite_list row_space">
+              <van-col span="9">
+                <view class="row_view">
+                  <van-image round width="45" height="45" src="{{item.img}}" />
+                  <text class="name">{{item.username}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>总人数</text>
+                  <text>{{item.all_invite}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>种子用户</text>
+                  <text>{{item.seed_count}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>裂变用户</text>
+                  <text>{{item.fission_count}}</text>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title=" 销量 ">
+        <view class="invite_list">
+          <view wx:for="{{detail_list}}" wx:key="index">
+            <van-row class="invite_list row_space">
+              <van-col span="9">
+                <view class="row_view">
+                  <van-image round width="45" height="45" src="{{item.img}}" />
+                  <text class="name">{{item.username}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>总人数</text>
+                  <text>{{item.all_invite}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>种子用户</text>
+                  <text>{{item.seed_count}}</text>
+                </view>
+              </van-col>
+              <van-col span="5">
+                <view class="col_view">
+                  <text>裂变用户</text>
+                  <text>{{item.fission_count}}</text>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+    <van-tabbar class="bot_bar" active="{{ active1 }}" bind:change="onChange">
+      <van-tabbar-item icon="home-o">数据</van-tabbar-item>
+      <van-tabbar-item icon="friends-o">个人</van-tabbar-item>
+    </van-tabbar>
+  </view>
+</view>

@@ -8,8 +8,8 @@
 
 .usercard {
   padding-top: 10px;
-  width: 94.87%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 10px auto;
   border-radius: 12px;
   background-color: #F3F3F3;
   padding: 1px 1px;
@@ -18,32 +18,32 @@
   align-items: center;
 }
 
+
 .mott {
-  padding-left: 12px;
-  width: 95.67%;
+  width: 100%;
   background-color: #fff;
-  border-radius: 0 0 12px 12px;
   text-align: center;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 4px;
-}
-
-.mott view {
-  margin: 20px;
+  padding: 15px 0px;
 }
 
 .webind {
-  padding-left: 12px;
-  width: 95.67%;
+  padding:0 10px;
+  width: 100%;
   background-color: #fff;
   margin-top: 10px;
   border-radius: 12px 12px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  height: 52px;
+  align-items:flex-end;
+}
+
+.we-bind{
+  display: flex;
+  flex-direction: row;
 }
 
 .webind text {
@@ -58,15 +58,15 @@
 }
 
 .webindlist {
-  padding-left: 12px;
-  width: 95%;
+  width: 100%;
   background-color: #fff;
   border-radius: 0px 0px 12px 12px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 52px;
+  
+  padding: 10px;
 }
 
 
@@ -90,4 +90,32 @@
 .welcome text {
   margin: 0 5px;
   color: #1890FF;
+}
+
+
+
+.flex_end {
+  margin-left: auto;
+}
+
+.nickkname{
+  margin-left: 8px;
+  color: #1890FF;
+}
+
+.card {
+  width: 100%;
+  width: 99%;
+  background-color: #fff;
+  margin-top: 8px;
+  border-radius: 12px;
+}
+
+.sign_out{
+  margin-top: 18px;
+}
+
+.picker {
+  color: black;
+  font-weight: bold;
 }

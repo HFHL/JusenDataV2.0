@@ -1,5 +1,5 @@
 <!--pages/val/val.wxml-->
-<view class="val_main">
+
   <view class="title card">
     <van-row>
       <van-col span="12">
@@ -25,17 +25,14 @@
 
   <view class="valcode card">
     <text>请输入您的唯一注册码</text>
-  
     <van-field class="code_input"
     size="large"
+    required
     value="{{ value }}"
-    placeholder="请输入用户名"
+    placeholder="注册码"
     border="{{ false }}"
     bind:change="onChange"
-    
    />
-   <van-button block  class="val_but" type="info" bindtap="toRegister">验证</van-button>
-  
-  </view>
 
-</view>
+  </view>
+  <van-button block  class="val_but" type="info" bindtap="toRegister">验证</van-button>

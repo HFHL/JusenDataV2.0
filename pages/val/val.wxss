@@ -2,29 +2,18 @@
 
 .card {
   width: 100%;
-  width: 94.6%;
+  width: 97.6%;
   background-color: #fff;
-  margin-top: 10px;
+  margin: 10px auto;
   border-radius: 12px 12px 0px 0px;
-  margin-bottom: 10px;
 }
 
 .valcode{
   display: flex;
   flex-direction: column;
-  
+  margin: 10px auto;
 }
-.val_main{
-  padding-top: 10px;
-  width: 94.87%;
-  margin: 0 auto;
-  border-radius: 12px;
-  background-color: #F3F3F3;
-  padding: 1px 1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .jusen_text {
   font-size: 35px;
@@ -38,6 +27,7 @@
 }
 
 .com_register {
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-content: space-between;
@@ -66,4 +56,5 @@
   justify-self: center;
   align-self: center;
   width: 70%; 
+  margin-top: 20px;
 }

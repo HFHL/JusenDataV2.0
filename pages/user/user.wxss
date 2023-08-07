@@ -7,7 +7,6 @@
 
 .usercard {
   padding-top: 10px;
-  width: 94.87%;
   margin: 0 auto;
   border-radius: 12px;
   background-color: #F3F3F3;
@@ -17,37 +16,41 @@
   align-items: center;
 }
 
-.card {
-  
-
-}
 
 .mott {
-  padding-left: 12px;
-  width: 95.67%;
+  width: 100%;
   background-color: #fff;
-  border-radius: 0 0 12px 12px;
   text-align: center;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 4px;
+  padding: 15px 0px;
+  margin-top: 10px;
 }
 
 .mott view {
   margin: 20px;
 }
-
 .webind {
-  padding-left: 12px;
-  width: 95.67%;
+  padding:0 10px;
+  width: 100%;
   background-color: #fff;
-  margin-top: 10px;
+  margin-top: 5px;
   border-radius: 12px 12px 0px 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  /* height: 52px; */
+  align-items:flex-end;
+  
+}
+
+.nickkname{
+  margin-left: 8px;
+  
+  color: #1890FF;
+}
+.ass{
+  margin-left: 40%;
 }
 
 .webind text {
@@ -66,48 +69,96 @@
   background-color: #fff;
   border-radius: 0px 0px 12px 12px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 52px;
+  
+  padding: 10px;
 }
 
+
+
+.we-bind{
+  display: flex;
+  
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.daytext{
+  font-size: 19px;
+}
+
+
+.daynum {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+
 .day {
-  padding-top: 8px;
-  padding-left: 12px;
-  width: 95.67%;
+  padding:8px;
   background-color: #fff;
   border-radius: 12px;
-  margin-top: 10px;
+  margin:5px auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .dayleft text:nth-child(1) {
   color: #8D8D8D;
+
 }
 
-.dayleft text:nth-child(2) {
+.dayleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  padding: 10px;
+}
+
+.flex_end{
+  margin-left: 62%;
+}
+
+.we-bind2{
+  padding:0 10px;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 5px;
+  border-radius: 12px 12px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+
+/* .dayleft text:nth-child(2) {
   color: #000;
-  font-size: 36px;
-}
+  font-size: 18px;
+} */
 
-.dayleft text:nth-child(3) {
+/* .dayleft text:nth-child(3) {
   color: red;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
-}
+} */
 
 .task {
   padding-bottom: 8px;
   padding-top: 8px;
   padding-left: 12px;
-  width: 95.67%;
   background-color: #fff;
-  margin-top: 10px;
   border-radius: 12px;
+  margin-top: 5px;
 }
 
 .task a {
@@ -161,17 +212,14 @@
 }
 
 .chartbox {
-
   width: 100%;
   height: 150px;
-
 }
 
 .chart {
   width: 150px;
   height: 150px;
   margin: 0 auto;
-
 }
 
 .button_group {
@@ -186,19 +234,30 @@
   padding-bottom: 8px;
   padding-top: 8px;
   padding-left: 12px;
-  width: 95.67%;
+  
   background-color: #fff;
   margin-top: 10px;
   border-radius: 12px;
 }
 
 .togroupbutton {
-  align-self: flex-end;
-  margin-left: 27%;
-  height: 40px;
+  margin-left: 35%;
   background-color: #1c8cfc;
-  line-height: 40px;
   color: #FFF;
+  width: 100px;
+  font-size: 18px;
+  
+}
+
+.share {
+  margin-top: 5px;
+  padding:8px 12px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .togrouptext {
@@ -210,7 +269,9 @@
 .taskitem {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  /* 两端分布 */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .button_group button {
@@ -219,23 +280,39 @@
 }
 
 .welcome {
-  padding-left: 12px;
+  margin-top: 5px;
+  padding:  18px 0px;
+  width: 100%;
+  border-radius: 12px;
   display: flex;
   flex-direction: row;
-  width: 95.67%;
-  border-radius: 12px 12px 0px 0px;
-  align-items: center;
-
-  background-color: #FFF;
+  align-content: center;
+  margin-bottom: 5px;
 }
 
-.welcome image {
-  width: 64px;
-  height: 64px;
-  border-radius: 100%;
+.vbind{
+  border-radius: 12px;
+}
+
+.icon {
+  margin-left: 55%;
+}
+
+.userinfo {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .welcome text {
-  margin: 0 5px;
-  color: #1890FF;
+  margin: 0 10px;
+}
+
+/* aa */
+
+.main {
+  padding: 0px 7px;
 }

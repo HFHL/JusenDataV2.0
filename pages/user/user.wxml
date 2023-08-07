@@ -1,44 +1,55 @@
-<!--pages/user/user.wxml-->
-
-<view class="banner">
-  <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
-  <van-image width="3rem" height="3rem" fit="contain" src="/images/cross.png" />
-  <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
-
-</view>
-
-<view class="usercard">
-  <view class="welcome">
-    <image src="/images/jusen_logo.png" mode="" />
-    <text>{{department}} {{username}} </text> 你好！
-    <van-button bindtap="onSetting" style="position:absolute;right: 5%;" size="small" type="info">设置</van-button>
+<!-- pages/user/user.wxml -->
+<view class="main">
+  <!-- <view class="banner">
+    <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
+    <van-image width="3rem" height="3rem" fit="contain" src="/images/cross.png" />
+    <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
+  </view> -->
+  <view class="welcome bg-white">
+    <van-image round width="4rem" height="4rem" fit="contain" src="/images/jusen_logo.svg" />
+    <view class="userinfo">
+      <text class="text-lg text-blue" style="width: 114rpx; height: 84rpx; display: block; box-sizing: border-box">{{department}}</text>
+      <text class="text-lg" style="width: 114rpx; height: 36rpx; display: block; box-sizing: border-box">{{username}}</text>
+    </view>
+    <van-icon style="position: relative; left: -64rpx; top: 0rpx; width: 70rpx; height: 136rpx; display: flex; box-sizing: border-box" bindtap="onSetting" class="icon" size="25px" name="setting-o" />
   </view>
-  <view class="mott">
-    <view>青春无悔 不负时光 私域直播</view>
-  </view>
-  <view class="webind">
-    <text>
-      已绑定微信数: <text> {{vbindcount}} </text>
-    </text>
-    <view class="webindlist">
-    OOOOOOOOOOOOOO
-  </view>
-  </view>
-  
   <view class="day">
     <view class="dayleft">
-      <text>XXXX-XX-XX
-      </text>
-      <text>DAY</text> <text> 1 </text>
+      <text class="">{{vbindtime}}</text>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+        <text class="daytext">DAY</text>
+        <text class="daynum">{{day}}</text>
+      </view>
     </view>
-    <view class="dayright">
-      <text>XXXX-XX-XXxxxxxxxxxxx</text>
-      <text>
-        xxxxxxxxxxxxxxxxxxxxxxx
-      </text>
+    <view class="dayright " style="width: 342rpx; height: 76rpx; display: block; box-sizing: border-box; position: relative; left: 87rpx; top: 0rpx">
+      <text>当前活动：</text>
+      <text>邀请种子用户，提高裂变率</text>
     </view>
   </view>
-
+  <view class="webind ">
+    <text class="" bindtap="openlist">
+      已绑定微信数:<text>{{vbindcount}}</text>
+    </text>
+    <van-button size="small" type="info" class="ass" round bindtap="addchat">添加微信</van-button>
+    <van-popup show="{{ bandshow }}" position="bottom" bind:close="onbindClose">
+      <!-- 获取微信昵称 -->
+      <view class="we-bind2">
+        <van-image round width="50" height="50" src="{{avatarUrl}}" />
+        <van-field value="{{ inputnickname }}" type="nickname" class="nickkname text-df" bindconfirm="getnickname"    bind:change="oninputchange" bindinput="handlenicknamechange" placeholder="点击获取微信昵称" />
+        <van-button round type="danger" bindtap="addbind">绑定</van-button>
+      </view>
+    </van-popup>
+  </view>
+  <view class="webindlist">
+    <!-- 动态渲染vbindlist -->
+    <view wx:for="{{vbindlist}}" wx:key="index" class="we-bind">
+      <van-image round width="50" height="50" src="{{item.avatar_url}}" />
+      <view class="nickkname">{{item.nickName}}</view>
+      <van-button class="flex_end" round type="danger" size="small" bindtap="delbind" data-index="{{index}}">
+        删除
+      </van-button>
+    </view>
+  </view>
   <view class="task">
     <van-row>
       <van-col span="12">
@@ -46,42 +57,41 @@
           <a>任务概览</a>
           <view class="tasklist">
             <view class="listitem">
-              <view class="status finished"></view><text>已完成任务：</text><text>12</text><text></text>
+              <view class="status finished"></view>
+              <text>已完成任务：</text>
+              <text>12</text>
+              <text></text>
             </view>
             <view class="listitem">
-              <view class="status needtofinish"></view><text>待完成任务：</text><text>18</text><text></text>
+              <view class="status needtofinish"></view>
+              <text>待完成任务：</text>
+              <text>18</text>
+              <text></text>
             </view>
             <view class="listitem">
-              <view class="status timeout"></view><text>未完成任务：</text><text>6</text><text></text>
+              <view class="status timeout"></view>
+              <text>未完成任务：</text>
+              <text>6</text>
+              <text></text>
             </view>
-
-
           </view>
         </view>
       </van-col>
       <van-col span="12">
-        <view class="chartbox">
+        <view class="chartbox" show="chartshow">
           <view class="chart">
             <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec}}"></ec-canvas>
           </view>
         </view>
       </van-col>
     </van-row>
-
-
   </view>
-
-  <view class="sendtogroup">
-    <view class="taskitem">
-      <view class="status needtofinish"></view><text class="togrouptext">群发所有用户</text>
-      <!-- <van-button  class="togroupbutton"  size="small" type="info">立即转发</van-button> -->
-    <button  class="togroupbutton">立即转发</button>
-    </view>
-  </view>
-
-
-  <view class="button_group">
-    <button type="primary">修改信息</button>
-    <button type="warn">退出登录</button>
-  </view>
+  <div class="share">
+    点击转发到微信群和朋友圈
+    <van-button type="primary"  round>立即转发</van-button>
+  </div>
+  <van-tabbar active="{{ active1 }}" bind:change="onChange">
+    <van-tabbar-item icon="home-o">数据</van-tabbar-item>
+    <van-tabbar-item icon="friends-o">个人</van-tabbar-item>
+  </van-tabbar>
 </view>

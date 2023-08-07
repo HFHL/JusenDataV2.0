@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: start;
   height: 100vh;
-  padding: 20rpx;
+  width: 100%;
 }
 
 .logo {
@@ -15,21 +15,19 @@
   margin-bottom: 40rpx;
 }
 
-.input-wrap {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40rpx;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.bot_bar{
+  margin-top: 90px;
 }
 
-.label {
-  width: 80rpx;
-  font-size: 30rpx;
+.getnickname {
+  display: none;
 }
+
+.logo_data {
+  margin-top: 100px;
+  
+}
+
 
 input {
   flex: 1;
@@ -60,4 +58,6 @@ input {
   font-size: 28rpx;
   color: #3D3D3D;
   line-height: 28px;
+  position: absolute;
+  bottom: 4%;
 }

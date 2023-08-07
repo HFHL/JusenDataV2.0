@@ -1,28 +1,57 @@
-<!--pages/setting/setting.wxml-->
-
-
-<view class="banner">
+<!-- pages/setting/setting.wxml -->
+<!-- <view class="banner">
   <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
   <van-image width="3rem" height="3rem" fit="contain" src="/images/cross.png" />
   <van-image width="3rem" height="3rem" fit="contain" src="/images/jusen_logo.png" />
-</view>
-
+</view> -->
 <view class="usercard">
   <view class="welcome">
-    <image src="/images/jusen_logo.png" mode="" />
-    <text>{{department}} {{username}} </text> 你好！
-    <van-button style="position:absolute;right: 5%;" size="small" type="info">设置</van-button>
+    <image src="/images/jusen_logo.svg" mode="" />
+    <text>{{username}}</text>
+    你好！
   </view>
   <view class="mott">
     <view>青春无悔 不负时光 私域直播</view>
   </view>
-  <view class="webind">
-    <text>
-      已绑定微信数: <text> {{vbindcount}} </text>
+  <view class="webind ">
+    <text class="text-lg">
+      已绑定微信数:
+      <text>{{vbindcount}}</text>
     </text>
+    <van-button size="small" type="info" bindtap="addchat">添加微信</van-button>
+    <van-popup show="{{ bandshow }}" position="bottom" bind:close="onbindClose">
+      <!-- 获取微信昵称 -->
+      <view class="we-bind">
+        <van-image round width="50" height="50" src="{{avatarUrl}}" />
+        <van-field value="{{ inputnickname }}" type="nickname" class="nickkname text-df" focus="{{focus}}" bindblur="lossfocus" bindfocus="focus" bindconfirm="getnickname" bindinput="handlenicknamechange" placeholder="点击获取微信昵称" />
+        <van-button class="flex_end" round type="danger" bindtap="addbind">绑定</van-button>
+      </view>
+    </van-popup>
   </view>
-
   <view class="webindlist">
-    OOOOOOOOOOOOOO<van-button type="info">管理绑定微信</van-button>
+    <!-- 动态渲染vbindlist -->
+    <view wx:for="{{vbindlist}}" wx:key="index" class="we-bind">
+      <van-image round width="50" height="50" src="{{item.avatar_url}}" />
+      <view class="nickkname">{{item.nickName}}</view>
+      <van-button class="flex_end" round type="danger" bindtap="delbind" data-index="{{index}}">
+        删除
+      </van-button>
+    </view>
+  </view>
+  <!-- <view class="base_info card">
+    <view class="title text-lg">修改基础信息</view>
+    <van-field custom-style="picker" class="picker" value="{{ departmentName }}" label="修改部门：" disabled border="{{ false }}" bindtap="showPopup" />
+    <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+      <van-picker show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" title="选择部门" columns="{{ departments }}" bind:change="onChange" />
+    </van-popup>
+
+    <view class="inputname card">
+      <van-field id="user" value="{{ username }}" clearable label="用户名" bind:change="handleInputChange1" placeholder="请输入用户名" bind:click-icon="onClickIcon" />
+      <van-field id="tel" value="{{ tel }}" bind:change="handleInputChange2" label="手机号" placeholder="请输入手机号" />
+      <van-field id="ps1" value="{{ pass1 }}" bind:change="handleInputChange3" type="password" label="密码" placeholder="请输入密码" border="{{ false }}" />
+    </view>
+  </view> -->
+  <view class="confirm card sign_out">
+    <van-button size="large" type="danger" bindtap="sign_out">退出登录</van-button>
   </view>
 </view>

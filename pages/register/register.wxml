@@ -4,7 +4,7 @@
   <view class="logo">
     <van-image width="50" height="50" src="/images/jusen_logo.png" />
   </view>
-
+  
   <view class="title card">
     <text class="com">合作商户名称</text><text>的员工注册空间</text>
   </view>
@@ -21,23 +21,29 @@
 
   <view class="inputname card">
     <van-field
+    id="user"
     value="{{ username }}"
     required
+    type="nickname"
     clearable
-    label="用户名"
-    icon="question-o"
-    placeholder="请输入用户名"
+    label="微信昵称"
+    bind:change="handleInputChange1"
+    placeholder="点击填入微信昵称"
     bind:click-icon="onClickIcon"
   />
 
   <van-field
-    value="{{ phone }}"
+    id="tel"
+    value="{{ tel }}"
+    bind:change="handleInputChange2"
     label="手机号"
     placeholder="请输入手机号"
     required
   />
   <van-field
-    value="{{ password }}"
+    id="ps1"
+    value="{{ pass1 }}"
+    bind:change="handleInputChange3"
     type="password"
     label="密码"
     placeholder="请输入密码"
@@ -45,20 +51,20 @@
     border="{{ false }}"
   />
   <van-field
-    value="{{ password }}"
+  id="ps2"
+    value="{{ pass2 }}"
+    bind:change="handleInputChange4"
     type="password"
     label="确认密码"
     placeholder="请再次输入密码"
     required
     border="{{ false }}"
   />
-
-
-
   </view>
 
   <view class="confirm card">
-    <van-button size="large" type="info">注册</van-button>
+    <van-button bindtap="register" size="large" type="info">注册</van-button>
+    <van-toast id="register-selector" />
   </view>
 
   <view class="confirm card">
